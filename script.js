@@ -1,4 +1,4 @@
-<script>
+
     // -------------------- DATA MENU (dari foto) --------------------
     const semuaMenu = {
       "Nasi": [
@@ -433,5 +433,3 @@
     buildFilterBar();
     renderAllCategories();
     renderKeranjang();
-
-  </script>
