@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MIE TIP TOP - Lezat, Cepat, Bikin Nagih!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container" id="app-container">
+    <header>
+      <h1>🍜 MIE TIP TOP</h1>
+      <p class="slogan">Lezat, Cepat, dan Bikin Nagih!</p>
+    </header>
+
+    <main>
+      <section id="menu">
+        <h2>Menu Andalan</h2>
+        <div class="filter-bar" id="filter-bar"></div>
+        <div id="daftar-menu"></div>
+      </section>
+
+      <section id="keranjang" style="margin-top:2rem">
+        <h2>Keranjang Pesanan</h2>
+        <div id="keranjang-konten">
+          <p id="keranjang-kosong">Keranjang masih kosong, ayo pesan!</p>
+          <div class="table-wrapper">
+            <table class="tabel-keranjang hidden" id="tabel-keranjang">
+              <thead>
+                <tr>
+                  <th>Menu</th>
+                  <th>Jumlah</th>
+                  <th>Harga</th>
+                  <th>Total</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="isi-keranjang"></tbody>
+            </table>
+          </div>
+          <div id="total-container" class="hidden">
+            Total Keseluruhan: <span id="total-keseluruhan-harga">Rp 0</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer style="padding:1rem 1.5rem">
+      <button class="btn btn-pesan" id="btn-pesan" disabled>Pesan Sekarang</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
