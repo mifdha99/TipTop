@@ -1,5 +1,4 @@
-
-  <script>
+<script>
     // -------------------- DATA MENU (dari foto) --------------------
     const semuaMenu = {
       "Nasi": [
@@ -436,5 +435,3 @@
     renderKeranjang();
 
   </script>
-</body>
-</html>
