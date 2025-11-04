@@ -410,24 +410,24 @@
       renderKeranjang();
     }
 
-    // Pesan button behavior
     btnPesanEl.addEventListener('click', ()=>{
-      if(Object.keys(keranjang).length === 0) {
-        alert('Keranjang masih kosong!');
-        return;
-      }
-      
-      let detailPesanan = "Detail Pesanan:\n\n";
-      Object.entries(keranjang).forEach(([key, item]) => {
-        detailPesanan += `${item.nama} - ${item.jumlah} x ${formatRupiahNumber(item.harga)} = ${formatRupiahNumber(item.harga * item.jumlah)}\n`;
-      });
-      detailPesanan += `\nTotal: ${totalKeseluruhanHargaEl.textContent}`;
-      
-      if(confirm(`${detailPesanan}\n\nKonfirmasi pesanan?`)) {
-        alert('Pesanan diterima! Terima kasih 😊\nPesanan akan segera diproses.');
-        resetKeranjang();
-      }
-    });
+  if(Object.keys(keranjang).length === 0) {
+    alert('Keranjang masih kosong!');
+    return;
+  }
+
+  let detailPesanan = "🍜 *Pesanan MIE TIP TOP*\n\n";
+  Object.entries(keranjang).forEach(([key, item]) => {
+    detailPesanan += `• ${item.nama} - ${item.jumlah} x ${formatRupiahNumber(item.harga)} = ${formatRupiahNumber(item.harga * item.jumlah)}\n`;
+  });
+  detailPesanan += `\n*Total:* ${totalKeseluruhanHargaEl.textContent}\n\n`;
+  detailPesanan += "_Pesanan dikirim via website MIE TIP TOP_";
+
+  const nomorWA = "6282311109501"; // 👉 ganti dengan nomor kamu
+  const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(detailPesanan)}`;
+
+  window.open(url, '_blank'); // buka di tab baru (atau langsung di WA)
+});
 
     // Init
     buildFilterBar();
